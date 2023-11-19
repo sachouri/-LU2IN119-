@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Projet_199" rel="Chapter" href="Projet_199.html"><title>Projet_199</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Projet_199.html">Projet_199</a></h1>
+
+<pre><span id="MODULEProjet_199"><span class="keyword">module</span> Projet_199</span>: <code class="code">sig</code> <a href="Projet_199.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><code><span id="TYPEelement"><span class="keyword">type</span> <code class="type"></code>element</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.Empty"><span class="constructor">Empty</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.DUP"><span class="constructor">DUP</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.DROP"><span class="constructor">DROP</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.SWAP"><span class="constructor">SWAP</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.ROT"><span class="constructor">ROT</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.OPA"><span class="constructor">OPA</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.OPB"><span class="constructor">OPB</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.STRING"><span class="constructor">STRING</span></span> <span class="keyword">of</span> <code class="type">string</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.INT"><span class="constructor">INT</span></span> <span class="keyword">of</span> <code class="type">int</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTelement.BOOL"><span class="constructor">BOOL</span></span> <span class="keyword">of</span> <code class="type">bool</code></code></td>
+
+</tr></table>
+
+
+
+<pre><span id="VALto_string"><span class="keyword">val</span> to_string</span> : <code class="type"><a href="Projet_199.html#TYPEelement">element</a> -&gt; string</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">to_string x</code> retourne la chaine de caracteres 
+    correspondante à l'élément <code class="code">x</code></p>
+</div>
+</div>
+
+<pre><span id="VALof_string"><span class="keyword">val</span> of_string</span> : <code class="type">string -&gt; <a href="Projet_199.html#TYPEelement">element</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">of_string s</code> retourne l'élément correspondant
+    à la chaine de caractères <code class="code">s</code></p>
+</div>
+</div>
+
+<pre><span id="VALsplit"><span class="keyword">val</span> split</span> : <code class="type">string -&gt; string list</code></pre><div class="info ">
+<div class="info-desc">
+<p>fonction utilitaire : 
+    <code class="code">split s</code> découpe le texte <code class="code">s</code> en une suite de mot.</p>
+</div>
+</div>
+
+<pre><span id="VALparse"><span class="keyword">val</span> parse</span> : <code class="type">string -&gt; <a href="Projet_199.html#TYPEelement">element</a> list</code></pre><div class="info ">
+<div class="info-desc">
+<p>transforme un texte (représentant un programme ou une pile)
+    en une suite de symboles du langage (e.g., "42" et "DUP")</p>
+</div>
+</div>
+
+<pre><span id="VALtext"><span class="keyword">val</span> text</span> : <code class="type"><a href="Projet_199.html#TYPEelement">element</a> list -&gt; string</code></pre><div class="info ">
+<div class="info-desc">
+<p>transforme un suite de symbole du langage (représentant un programme 
+    ou une pile) en un texte équivalent. 
+    Par exemple : <code class="code">text (parse "1 2 +")) = "1 2 +"</code>.</p>
+</div>
+</div>
+
+<pre><span id="TYPEprog"><span class="keyword">type</span> <code class="type"></code>prog</span> = <code class="type"><a href="Projet_199.html#TYPEelement">element</a> list</code> </pre>
+
+
+<pre><span id="TYPEstack"><span class="keyword">type</span> <code class="type"></code>stack</span> = <code class="type"><a href="Projet_199.html#TYPEelement">element</a> list</code> </pre>
+
+<p>fonction auxiliaire : évaluation d'un opérateur binaire 
+    <code class="code">eval_binop op e1 e2</code> effectue l'opération (e1 e2 -- op(e1,e2))</p>
+
+<pre><span id="VALeval_binop"><span class="keyword">val</span> eval_binop</span> : <code class="type"><a href="Projet_199.html#TYPEelement">element</a> -&gt;<br>       <a href="Projet_199.html#TYPEelement">element</a> -&gt; <a href="Projet_199.html#TYPEelement">element</a> -&gt; <a href="Projet_199.html#TYPEelement">element</a></code></pre><p>fonction auxiliaire : évaluation d'un opérateur binaire
+    <code class="code">eval_stackop stk op</code> évalue <code class="code">op</code> avec les deux premiers
+    éléments de la pile <code class="code">stk</code> et retourne la pile résultante</p>
+
+<pre><span id="VALeval_stackop"><span class="keyword">val</span> eval_stackop</span> : <code class="type"><a href="Projet_199.html#TYPEstack">stack</a> -&gt; <a href="Projet_199.html#TYPEelement">element</a> -&gt; <a href="Projet_199.html#TYPEstack">stack</a></code></pre>
+<pre><span id="VALstep"><span class="keyword">val</span> step</span> : <code class="type"><a href="Projet_199.html#TYPEstack">stack</a> -&gt; <a href="Projet_199.html#TYPEelement">element</a> -&gt; <a href="Projet_199.html#TYPEstack">stack</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">step stk e</code> exécute l'élément <code class="code">e</code> dans la pile <code class="code">stk</code> 
+    et retourne la pile résultante</p>
+</div>
+</div>
+
+<pre><span id="VALcalc"><span class="keyword">val</span> calc</span> : <code class="type"><a href="Projet_199.html#TYPEstack">stack</a> -&gt; <a href="Projet_199.html#TYPEprog">prog</a> -&gt; <a href="Projet_199.html#TYPEstack">stack</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">calc stk p</code> exécute le programme <code class="code">p</code> dans la pile <code class="code">stk</code> 
+    et retourne la pile résultante</p>
+</div>
+</div>
+
+<pre><span id="TYPEname"><span class="keyword">type</span> <code class="type"></code>name</span> = <code class="type">string</code> </pre>
+
+
+<pre><span id="TYPEdico"><span class="keyword">type</span> <code class="type"></code>dico</span> = <code class="type">(<a href="Projet_199.html#TYPEname">name</a> * <a href="Projet_199.html#TYPEprog">prog</a>) list</code> </pre>
+
+
+<pre><span id="VALempty"><span class="keyword">val</span> empty</span> : <code class="type"><a href="Projet_199.html#TYPEdico">dico</a></code></pre>
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type"><a href="Projet_199.html#TYPEname">name</a> -&gt; <a href="Projet_199.html#TYPEprog">prog</a> -&gt; <a href="Projet_199.html#TYPEdico">dico</a> -&gt; <a href="Projet_199.html#TYPEdico">dico</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">add x def dico</code> ajoute l'association <code class="code">(x,def)</code> dans 
+    le dico <code class="code">dico</code> et retourne le dico résultant</p>
+</div>
+</div>
+
+<pre><span id="VALlookup"><span class="keyword">val</span> lookup</span> : <code class="type"><a href="Projet_199.html#TYPEname">name</a> -&gt; <a href="Projet_199.html#TYPEdico">dico</a> -&gt; <a href="Projet_199.html#TYPEprog">prog</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">lookup x dico</code> retourne le programme associé à <code class="code">x</code> 
+    si l'association existe dans <code class="code">dico</code></p>
+</div>
+</div>
+<p><code class="code">eval dico stk p</code> exécute le programme <code class="code">p</code> dans la pile <code class="code">stk</code> 
+    et retourne la pile résultante (cf. rapport pour le détail)</p>
+
+<pre><span id="VALeval"><span class="keyword">val</span> eval</span> : <code class="type"><a href="Projet_199.html#TYPEdico">dico</a> -&gt; <a href="Projet_199.html#TYPEstack">stack</a> -&gt; <a href="Projet_199.html#TYPEprog">prog</a> -&gt; <a href="Projet_199.html#TYPEstack">stack</a></code></pre>
+<pre><span id="VALcarre"><span class="keyword">val</span> carre</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALcube"><span class="keyword">val</span> cube</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALfib"><span class="keyword">val</span> fib</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALfact"><span class="keyword">val</span> fact</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALif_then_else"><span class="keyword">val</span> if_then_else</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALu"><span class="keyword">val</span> u</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALsum_n"><span class="keyword">val</span> sum_n</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALval_abs"><span class="keyword">val</span> val_abs</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALf91"><span class="keyword">val</span> f91</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALsyracuse"><span class="keyword">val</span> syracuse</span> : <code class="type">int -&gt; string</code></pre>
+<pre><span id="VALackerman"><span class="keyword">val</span> ackerman</span> : <code class="type">int -&gt; int -&gt; string</code></pre>
+<pre><span id="VALjeux_de_test"><span class="keyword">val</span> jeux_de_test</span> : <code class="type">(string * string) list</code></pre>
+<pre><span id="VALtester"><span class="keyword">val</span> tester</span> : <code class="type">string -&gt; string</code></pre></body></html>
